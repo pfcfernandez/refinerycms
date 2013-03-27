@@ -30,7 +30,8 @@
                   :title => t('new', :scope => 'refinery.admin.pages') %>
 
       <%= link_to refinery_icon_tag('application_edit.png'),
-                  refinery.edit_admin_page_path(page.uncached_nested_url, :switch_locale => (page.translations.first.locale unless page.translated_to_default_locale?)),
+		  #refinery.edit_admin_page_path(page.uncached_nested_url, :switch_locale => (page.translations.first.locale unless page.translated_to_default_locale?)),
+                  refinery.edit_admin_page_path(page.uncached_nested_url, :switch_locale => (page.translations.first.locale)),
                   :title => t('edit', :scope => 'refinery.admin.pages') %>
 
       <%= link_to refinery_icon_tag('delete.png'),
